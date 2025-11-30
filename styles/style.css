@@ -52,39 +52,62 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
-
+/* Основные стили*/
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 711px 399px;
   align-items: flex-end;
-  width: 100%;
+  width: 1140px;
   gap: 30px;
 }
 
+/*Результаты поиска*/
 .result__video-container {
-  width: 711px;
+  width: 100%;
   height: 386px;
   margin-bottom: 16px;
 }
 
 .result__video {
+  display: block;
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
-
+/* Форма поиска */
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
+.search-form__fieldset-title {
+  font: normal 400 18px/1.0 'Fira Sans Condensed', sans-serif;
+}
+
+/*Секция с деталями*/
 .content__details {
-  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+}
+
+.title {
+  font: normal 700 75px/0.94 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: rgb(255 255 255 / 20%)
 }
 
 .content__list-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
   height: 298px;
   overflow-y: scroll;
 }
@@ -95,18 +118,54 @@ ol {
   gap: 30px;
 }
 
+/*Карточка в списке*/
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .content__video-card {
   display: flex;
   align-items: start;
 }
 
-.content__video-card-thumbnail {
-  min-width: 194px;
-  height: 103PX;
-  object-fit: cover;
-  object-position: center;
-}
-
 .content__video-card-description-container {
   flex-grow: 1;
+  overflow-x: hidden;
 }
+
+.content__video-card-title {
+  font: normal 700 30px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.content__video-card-description {
+  font: 18px/0.9 'Fira Sans Condensed', sans-serif;
+  -webkit-line-clamp: 4;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.content__video-card-thumbnail {
+  min-width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+
+
+
+
+
+
+
+
